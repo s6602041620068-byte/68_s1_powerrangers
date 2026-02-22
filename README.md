@@ -7,3 +7,9 @@
 - Phuwadet (Phu) 6602041620131
 - Punyanan (Whan) 6602041630021
 
+## Running a services
+### Database
+```
+docker compose -f db.yaml up #monitoring
+docker compose -f db.yaml up -d #background
+```
