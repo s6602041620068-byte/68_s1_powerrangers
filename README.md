@@ -24,3 +24,9 @@ docker compose -f admin.yaml up -d #background
 docker compose -f app.yaml up #monitoring
 docker compose -f app.yaml up -d #background
 ```
+
+## Run all service 
+```
+docker-compose up #monotoring
+docker-compose up -d #background 
+```
