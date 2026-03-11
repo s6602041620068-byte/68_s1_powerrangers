@@ -1,0 +1,10 @@
+services:
+  s1proxy:
+    image: caddy:alpine
+    container_name: 68-s1-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    command: caddy reverse-proxy --from :80 --to s1app:1337
+    depends_on:
+      - s1app
