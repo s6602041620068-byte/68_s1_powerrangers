@@ -2,6 +2,7 @@ include:
   - db.yaml
   - admin.yaml
   - app.yaml
+  - proxy.yaml
 
 networks:
   s1_network:
