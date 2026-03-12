@@ -2,8 +2,11 @@ services:
   s1app:
     image: prawee/strapi:latest
     container_name: 68-s1-app
+    restart: always
     ports:
       - ${APP_PORT}:1337
+    volumes:
+      - strapi_uploads:/opt/app/public/uploads
     environment:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_CLIENT: ${DATABASE_CLIENT}
@@ -11,3 +14,6 @@ services:
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_PORT: ${DATABASE_PORT}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
+
+volumes:
+  strapi_uploads:

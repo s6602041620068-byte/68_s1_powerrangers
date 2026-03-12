@@ -1,0 +1,8 @@
+# ใส่ชื่อโดเมนของคุณตรงนี้ (เช่น s1.yourdomain.com หรือ test.com)
+# หากต้องการทดสอบในเครื่องตัวเอง ให้เปลี่ยนเป็น localhost
+localhost {
+    # ใช้ Certificate จาก mkcert
+    tls /etc/caddy/certs/localhost.pem /etc/caddy/certs/localhost-key.pem
+    # ส่งต่อ Request ตลอดจนข้อมูลทั้งหมดไปที่ s1app พอร์ต 1337
+    reverse_proxy s1app:1337
+}

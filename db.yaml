@@ -2,9 +2,17 @@ services:
   s1db:
     image: postgres:latest
     container_name: 68-s1-database
+    restart: always
     ports:
       - ${POSTGRES_PORT}:5432
+    volumes:
+      - pgdata:/var/lib/postgresql
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      PGDATA: /var/lib/postgresql/data
+
+
+volumes:
+  pgdata:
