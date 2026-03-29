@@ -4,7 +4,7 @@ services:
     container_name: 68_s1_powerrangers_proxy
     restart: always
     ports:
-      - "80:80"
+      - "1001:1001"
       - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
