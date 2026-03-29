@@ -1,10 +1,10 @@
 services:
   s1admin:
     image: dpage/pgadmin4
-    container_name: 68-s1-admin
+    container_name: 68_s1_powerrangers_admin
     restart: always
     ports:
-      - ${PGADMIN_PORT}:80
+      - ${PGADMIN_PORT}:47000
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
