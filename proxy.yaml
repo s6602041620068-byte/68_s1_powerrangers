@@ -5,7 +5,7 @@ services:
     restart: always
     ports:
       - "1001:1001"
-      - "443:443"
+      - "20004:20004"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ./certs:/etc/caddy/certs
